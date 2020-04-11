@@ -20,7 +20,7 @@ void loop() {
     else if (analogvalue > 80)
     {
         digitalWrite(led, HIGH);
-        Particle.publish("light_level", "high");
+        Particle.publish("light_level", "low");
     }
     
     delay(1800000);
