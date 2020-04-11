@@ -1,0 +1,28 @@
+int led = D7;
+int analogvalue;
+
+void setup() {
+
+    pinMode(led, OUTPUT);
+   
+}
+
+
+void loop() {
+
+    analogvalue = random(100);
+    
+    if (analogvalue < 15)
+    {
+        digitalWrite(led, HIGH);
+        Particle.publish("light_level", "low");
+    }
+    else if (analogvalue > 80)
+    {
+        digitalWrite(led, HIGH);
+        Particle.publish("light_level", "high");
+    }
+    
+    delay(1800000);
+}
+
