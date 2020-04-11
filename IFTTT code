@@ -1,3 +1,10 @@
+//Light sensor
+
+//for the purpose of this experiment,
+//the max light level is 100
+//the min light level is 0
+//Random values have been used as mock values for the light sensor
+
 int led = D7;
 int analogvalue;
 
@@ -10,7 +17,9 @@ void setup() {
 
 void loop() {
 
-    analogvalue = random(100);
+    analogvalue = random(0, 100);
+    digitalWrite(led, LOW);
+    
     
     if (analogvalue < 15)
     {
