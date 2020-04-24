@@ -24,14 +24,14 @@ void loop() {
     if (analogvalue < 15)
     {
         digitalWrite(led, HIGH);
-        Particle.publish("light_level", "low");
+        Particle.publish("light_level", "abnormal");
     }
     else if (analogvalue > 80)
     {
         digitalWrite(led, HIGH);
-        Particle.publish("light_level", "low");
+        Particle.publish("light_level", "abnormal");
     }
     
-    delay(1800000);
+    delay(600000);
 }
 
